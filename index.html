@@ -84,9 +84,9 @@
     max-width: var(--max);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 180px 1fr 300px;
     gap: 3rem;
-    align-items: end;
+    align-items: start;
   }
   .hero-eyebrow {
     font-size: 11px;
@@ -375,7 +375,7 @@
 
   /* MOBILE */
   @media (max-width: 720px) {
-    .hero-inner { grid-template-columns: 1fr; }
+    .hero-inner { grid-template-columns: 1fr; } .hero-photo { width: 120px; height: 120px; margin: 0 auto; display: block; }
     .hero-meta { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 1.5rem; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .section-header { grid-template-columns: 1fr; gap: 0.5rem; }
     .services-grid, .skills-columns, .contact-grid { grid-template-columns: 1fr; }
@@ -410,6 +410,7 @@
 
 <header class="hero">
   <div class="hero-inner">
+    <img src="Favorit_1.jpg" alt="Dr. Robert Ehrensperger" class="hero-photo">
     <div>
       <div class="hero-eyebrow">CIO · IT-Geschäftsführer · IT-Bereichsleiter</div>
       <h1 class="hero-name">Dr. Robert<br>Ehrensperger</h1>
