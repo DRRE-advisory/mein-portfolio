@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Robert Ehrensperger – IT-Führung & Digitale Transformation</title>
+<meta name="description" content="Portfolio von Dr. Robert Ehrensperger – IT-Führungskraft, CIO und Experte für SAP, Enterprise Architecture und digitale Transformation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1c1c1a;
+    --ink-mid: #4a4a46;
+    --ink-light: #8a8a84;
+    --rule: #e0ddd6;
+    --page: #faf9f6;
+    --accent: #2a4a7f;
+    --accent-light: #eef2f8;
+    --gold: #9a7c3e;
+    --white: #ffffff;
+    --max: 1100px;
+    --pad: clamp(1.25rem, 5vw, 3rem);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,249,246,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 var(--pad);
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .nav-brand {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--ink-mid);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    padding: clamp(4rem, 10vw, 7rem) var(--pad) clamp(3rem, 7vw, 5rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 3rem;
+    align-items: end;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+  }
+  .hero-name {
+    font-family: 'Lora', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+    color: var(--ink-mid);
+    margin-bottom: 1.75rem;
+    line-height: 1.5;
+  }
+  .hero-bio {
+    font-size: 15px;
+    color: var(--ink-mid);
+    line-height: 1.75;
+    max-width: 560px;
+  }
+  .hero-meta {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+  }
+  .hero-meta-item {
+    margin-bottom: 1.25rem;
+  }
+  .hero-meta-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.2rem;
+  }
+  .hero-meta-value {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .hero-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 1.5rem;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .hero-cta:hover { background: #1e3a6a; }
+
+  /* SECTIONS */
+  section {
+    padding: clamp(3rem, 7vw, 5rem) var(--pad);
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-inner { max-width: var(--max); margin: 0 auto; }
+  .section-header {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: baseline;
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-top: 6px;
+  }
+  .section-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  /* LEISTUNGEN */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+  }
+  .service-row {
+    display: contents;
+  }
+  .service-row:not(:last-child) .service-left,
+  .service-row:not(:last-child) .service-right {
+    border-bottom: 1px solid var(--rule);
+  }
+  .service-left {
+    padding: 1.5rem 2rem 1.5rem 0;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    padding-top: 1.75rem;
+  }
+  .service-right {
+    padding: 1.5rem 0;
+    border-left: 1px solid var(--rule);
+    padding-left: 2rem;
+  }
+  .service-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+  .service-desc {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  /* WERDEGANG */
+  .timeline { display: flex; flex-direction: column; }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .timeline-item:first-child { padding-top: 0; }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-period {
+    font-size: 12px;
+    color: var(--ink-light);
+    padding-top: 3px;
+    line-height: 1.4;
+  }
+  .timeline-content {}
+  .timeline-role {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+  .timeline-org {
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+  .timeline-desc {
+    font-size: 13px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+  }
+  .timeline-badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 11px;
+    padding: 3px 8px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 2px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  /* KOMPETENZEN */
+  .skills-columns {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+  }
+  .skills-group {
+    display: contents;
+  }
+  .skills-group:not(:last-child) .skill-cat,
+  .skills-group:not(:last-child) .skill-list-wrap {
+    border-bottom: 1px solid var(--rule);
+  }
+  .skill-cat {
+    padding: 1.25rem 2rem 1.25rem 0;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .skill-list-wrap {
+    padding: 1.25rem 0 1.25rem 2rem;
+    border-left: 1px solid var(--rule);
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .skill-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-mid);
+    background: var(--white);
+  }
+
+  /* PUBLIKATIONEN */
+  .pub-list { display: flex; flex-direction: column; gap: 0; }
+  .pub-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-year { font-size: 12px; color: var(--ink-light); padding-top: 2px; }
+  .pub-title { font-size: 14px; color: var(--ink); line-height: 1.5; font-style: italic; font-family: 'Lora', serif; }
+
+  /* KONTAKT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+  }
+  .contact-label {
+    padding: 1.1rem 2rem 1.1rem 0;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border-bottom: 1px solid var(--rule);
+  }
+  .contact-value {
+    padding: 1.1rem 0 1.1rem 2rem;
+    border-left: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .contact-value a { color: var(--accent); text-decoration: none; }
+  .contact-value a:hover { text-decoration: underline; }
+  .contact-label:last-of-type,
+  .contact-value:last-of-type { border-bottom: none; }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem var(--pad);
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-light);
+  }
+
+  /* MOBILE */
+  @media (max-width: 720px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-meta { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 1.5rem; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .section-header { grid-template-columns: 1fr; gap: 0.5rem; }
+    .services-grid, .skills-columns, .contact-grid { grid-template-columns: 1fr; }
+    .service-left, .service-right, .skill-cat, .skill-list-wrap { padding-left: 0; border-left: none; }
+    .service-right, .skill-list-wrap { padding-top: 0.25rem; }
+    .timeline-item, .pub-item { grid-template-columns: 1fr; gap: 0.25rem; }
+    .timeline-period, .pub-year { font-size: 11px; }
+    .nav-links { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Dr. Robert Ehrensperger</a>
+    <ul class="nav-links">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#werdegang">Werdegang</a></li>
+      <li><a href="#kompetenzen">Kompetenzen</a></li>
+      <li><a href="#publikationen">Publikationen</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">CIO · IT-Geschäftsführer · IT-Bereichsleiter</div>
+      <h1 class="hero-name">Dr. Robert<br>Ehrensperger</h1>
+      <p class="hero-subtitle">Strategische IT-Führung · SAP &amp; Enterprise Architecture · Digitale Transformation</p>
+      <p class="hero-bio">Promovierter Wirtschaftsinformatiker mit über 20 Jahren Erfahrung in der End-to-End-Verantwortung komplexer IT-Transformationen – von der Energiewirtschaft über die Automobilindustrie bis hin zum regulierten Financial-Services-Umfeld. Verbindet operative Bodenständigkeit mit strategischer Denkschärfe.</p>
+      <a href="#kontakt" class="hero-cta">Kontakt aufnehmen</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Aktuelle Position</div>
+        <div class="hero-meta-value">IT Abteilungsleiter<br>N-ERGIE AG, Nürnberg</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Akademischer Grad</div>
+        <div class="hero-meta-value">Dr. phil. Wirtschaftsinformatik<br>Universität Innsbruck</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Standort</div>
+        <div class="hero-meta-value">Bayern · überregional mobil</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Auszeichnung</div>
+        <div class="hero-meta-value">BMW Group Scientific Award 2023</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="leistungen">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">Leistungen</div>
+      <h2 class="section-title">Was ich anbiete</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-row">
+        <div class="service-left">IT-Strategie</div>
+        <div class="service-right">
+          <div class="service-title">IT-Strategie &amp; Governance</div>
+          <div class="service-desc">Entwicklung und Umsetzung wirkungsvoller IT-Strategien, Governance-Strukturen und Steuerungsmodelle – mit Erfahrung bis auf C-Level und Bereichsvorstandsebene.</div>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-left">Transformation</div>
+        <div class="service-right">
+          <div class="service-title">Digitale Transformation</div>
+          <div class="service-desc">End-to-End-Leitung komplexer Transformationsprogramme mit Budgets bis 80 Mio. €/Jahr und Teams bis 250 Personen – von der Strategie bis zum internationalen Rollout.</div>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-left">SAP</div>
+        <div class="service-right">
+          <div class="service-title">SAP S/4HANA &amp; ERP</div>
+          <div class="service-desc">Brownfield-Migrationen, Neueinführungen und internationale Rollouts von SAP S/4HANA inkl. SAP BTP, FI-CO und FI-CA. Erfahrung mit dem gesamten Weg von ECC zu S/4HANA.</div>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-left">Architektur</div>
+        <div class="service-right">
+          <div class="service-title">Enterprise Architecture</div>
+          <div class="service-desc">Design und Management ökosystemischer Unternehmensarchitekturen – cloudbasiert, skalierbar und zukunftsfähig. Fundiert durch Promotion und Publikationen in renommierten Fachzeitschriften.</div>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-left">Führung</div>
+        <div class="service-right">
+          <div class="service-title">IT-Führung &amp; Organisationsentwicklung</div>
+          <div class="service-desc">Aufbau und Führung von IT-Abteilungen mit über 55 Mitarbeitenden – agil, interkulturell und ergebnisorientiert. Aufnahme in Führungskräfte-Nachwuchsprogramme bei BMW und Continental.</div>
+        </div>
+      </div>
+      <div class="service-row">
+        <div class="service-left">Energie</div>
+        <div class="service-right">
+          <div class="service-title">Energiewirtschaft &amp; OT/IT-Integration</div>
+          <div class="service-desc">IT-Transformation im regulierten Energieumfeld – von der Modernisierung netztechnischer Systeme bis zur Digitalisierung vertriebsnaher Prozesse bei Versorgern und Stadtwerken.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="werdegang">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">Werdegang</div>
+      <h2 class="section-title">Berufliche Laufbahn</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-period">seit 02/2024<br>N-ERGIE AG</div>
+        <div class="timeline-content">
+          <div class="timeline-role">IT Abteilungsleiter – Portale &amp; Applikationen</div>
+          <div class="timeline-org">N-ERGIE AG, Nürnberg</div>
+          <div class="timeline-desc">Gesamtverantwortung für IT-Strategie, Budget und Governance der IT-Abteilung IT-PA. Leitung des Transformationsprojekts NEOS zur Modernisierung netztechnischer Systeme (25 Mio. €/Jahr, 200 Mitarbeitende). Aufbau agiler Organisationseinheiten zur End-to-End-Digitalisierung vertriebsnaher Prozesse.</div>
+          <span class="timeline-badge">Budget: 25 Mio. €/Jahr · 200 MA</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">09/2018–01/2024<br>BMW AG</div>
+        <div class="timeline-content">
+          <div class="timeline-role">IT Manager – Enterprise Architecture</div>
+          <div class="timeline-org">BMW AG, München</div>
+          <div class="timeline-desc">Gesamtverantwortung der Cloud-Transformation des Konzernbereiches BMW Financial Services. Design und internationaler Rollout eines Digital Business Ecosystems auf Basis von SAP S/4HANA. Koordination der Gremienlandschaft auf Bereichsvorstandsebene.</div>
+          <span class="timeline-badge">Budget: 80 Mio. €/Jahr · 250 MA</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">10/2011–11/2016<br>Osram AG</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Enterprise Architekt / IT-Projektleiter</div>
+          <div class="timeline-org">Osram AG, Regensburg</div>
+          <div class="timeline-desc">Fachliche Leitung des Enterprise Architecture Teams. Projektleitung für die weltweite SAP S/4HANA-Einführung (Brownfield-Migration von ECC). Transformation zur cloudbasierten Service-Landschaft auf Basis der SAP BTP.</div>
+          <span class="timeline-badge">Globaler Rollout · SAP S/4HANA</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">02/2008–09/2011<br>Continental AG</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Software Architekt &amp; Projektleiter</div>
+          <div class="timeline-org">Continental AG, Regensburg</div>
+          <div class="timeline-desc">Automotive-Projekt IndusDB zum Austausch von Softwareständen zwischen Zulieferindustrie, Automobilherstellern und Werkstätten (BMW, VW, Audi, Continental). Leitung des Change Control Boards. Aufnahme in das Nachwuchsprogramm „Jump".</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">03/2004–01/2008<br>Siemens AG</div>
+        <div class="timeline-content">
+          <div class="timeline-role">Industrieelektroniker</div>
+          <div class="timeline-org">Siemens AG, Regensburg</div>
+          <div class="timeline-desc">Aufbau und Inbetriebnahme energietechnischer Systeme und Netzkomponenten. Wahl zum jüngsten Betriebsrat des Siemens-Konzerns.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kompetenzen">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">Kompetenzen</div>
+      <h2 class="section-title">Fachliches Profil</h2>
+    </div>
+    <div class="skills-columns">
+      <div class="skills-group">
+        <div class="skill-cat">SAP &amp; ERP</div>
+        <div class="skill-list-wrap">
+          <div class="skill-tags">
+            <span class="skill-tag">SAP S/4HANA</span>
+            <span class="skill-tag">SAP BTP</span>
+            <span class="skill-tag">FI-CO / FI-CA</span>
+            <span class="skill-tag">SAP Process Orchestration</span>
+            <span class="skill-tag">Brownfield-Migration</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skill-cat">Architektur</div>
+        <div class="skill-list-wrap">
+          <div class="skill-tags">
+            <span class="skill-tag">Enterprise Architecture</span>
+            <span class="skill-tag">Cloud-Transformation</span>
+            <span class="skill-tag">Microservice-Architektur</span>
+            <span class="skill-tag">BPMN 2.0</span>
+            <span class="skill-tag">OOA / UML</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skill-cat">Führung</div>
+        <div class="skill-list-wrap">
+          <div class="skill-tags">
+            <span class="skill-tag">IT-Strategie &amp; Governance</span>
+            <span class="skill-tag">Budgetverantwortung</span>
+            <span class="skill-tag">Stakeholder Management</span>
+            <span class="skill-tag">Servant Leadership</span>
+            <span class="skill-tag">Interkulturelle Teams</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skill-cat">Methoden</div>
+        <div class="skill-list-wrap">
+          <div class="skill-tags">
+            <span class="skill-tag">SAFe / LeSS Huge</span>
+            <span class="skill-tag">Scrum / Kanban</span>
+            <span class="skill-tag">ITIL Service Management</span>
+            <span class="skill-tag">Design Thinking</span>
+            <span class="skill-tag">Impact Mapping</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skill-cat">Branchen</div>
+        <div class="skill-list-wrap">
+          <div class="skill-tags">
+            <span class="skill-tag">Energiewirtschaft</span>
+            <span class="skill-tag">Automotive</span>
+            <span class="skill-tag">Financial Services</span>
+            <span class="skill-tag">Halbleiter &amp; Hightech</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publikationen">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">Forschung</div>
+      <h2 class="section-title">Publikationen &amp; Vorträge</h2>
+    </div>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-title">The Digital Business Ecosystems Maturity Model</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2021</div>
+        <div class="pub-title">Toward a Maturity Model for Digital Business Ecosystems from an IT Perspective</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2021</div>
+        <div class="pub-title">Rethinking Information Technology Governance for Digital Business Ecosystems</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div class="pub-title">Current Practices in the Usage of Inter-Enterprise Architecture Models for the Management of Business Ecosystems</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2020</div>
+        <div class="pub-title">Collecting and Integrating Unstructured Information into EAM: A Systematic Literature Review</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2025</div>
+        <div class="pub-title">Vortrag: AI-Native Future – Wie Künstliche Intelligenz die IT-Landschaft revolutioniert</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-title">Vortrag: The BMW Cloud Strategy 2.0 – Amazon AWS vs. Google Cloud Platform vs. Microsoft Azure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">Kontakt</div>
+      <h2 class="section-title">Erreichbarkeit</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-label">Standort</div>
+      <div class="contact-value">Lupburg, Bayern · überregional mobil</div>
+      <div class="contact-label">Verfügbarkeit</div>
+      <div class="contact-value">Auf Anfrage</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dr. Robert Ehrensperger · Alle Rechte vorbehalten
+</footer>
+
+</body>
+</html>
