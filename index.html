@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Robert Ehrensperger – IT-Strategieberatung &amp; Advisory | SAP S/4HANA &amp; Enterprise Architecture Management</title>
-<meta name="description" content="Unabhängiger IT-Strategieberater aus Bayern: SAP S/4HANA-Transformation, Enterprise Architecture Management, digitale Transformation mit Erfahrung aus Energiewirtschaft, Automotive und Financial Services. Über 20 Jahre Konzernerfahrung (BMW, Siemens, N-ERGIE).">
-<meta name="keywords" content="Interim-Management, IT-Strategieberatung, Enterprise Architecture Management, SAP S/4HANA Beratung, IT-Transformation, Energiewirtschaft, Interim Management IT, IT-Bereichsleiter, Digitale Transformation Bayern">
+<title>Dr. Robert Ehrensperger – S/4HANA-Readiness, Programm-Review &amp; IT-Zielarchitektur | Unabhängige IT-Strategieberatung</title>
+<meta name="description" content="Unabhängige Bewertung von SAP S/4HANA-Transformationen, Programm-Reviews und IT-Zielarchitekturen – in definierten Formaten mit Festpreis. Über 20 Jahre Konzernerfahrung aus BMW, Osram, Continental und Siemens. Ohne Interesse am Folgegeschäft.">
+<meta name="keywords" content="S/4HANA Readiness Check, SAP S/4HANA Migration Bewertung, Programm-Review IT, Zweitmeinung IT-Projekt, IT-Zielarchitektur, Enterprise Architecture Management, IT-Strategieberatung, unabhängiger IT-Berater, CIO Sparring, Digitale Transformation Bayern">
 <meta name="author" content="Dr. Robert Ehrensperger">
 <link rel="canonical" href="https://www.drrobertehrensperger.de/">
 
 <!-- Open Graph für LinkedIn/Social Media -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.drrobertehrensperger.de/">
-<meta property="og:title" content="Dr. Robert Ehrensperger – IT-Strategieberatung &amp; Advisory">
-<meta property="og:description" content="IT-Strategieberatung, Advisory und Enterprise Architecture Management – über 20 Jahre Konzernerfahrung in Energiewirtschaft, Automotive und Financial Services.">
+<meta property="og:title" content="Dr. Robert Ehrensperger – Unabhängige Bewertung von S/4HANA-Transformationen">
+<meta property="og:description" content="S/4HANA-Readiness-Check, Programm-Review, Zielarchitektur-Sprint und CIO-Sparring – definierte Formate mit Festpreis, aus über 20 Jahren Konzernerfahrung.">
 <meta property="og:image" content="https://www.drrobertehrensperger.de/Favorit_1.jpg">
 <meta property="og:locale" content="de_DE">
 
@@ -45,7 +45,7 @@
     "knowsAbout": ["SAP S/4HANA", "Enterprise Architecture Management", "IT-Strategie", "IT-Zielarchitektur", "KI-Governance", "KI in der Softwareentwicklung", "Agentenbasierte Entwicklung", "Cloud-Transformation"]
   },
   "areaServed": "DE",
-  "serviceType": ["IT-Strategieberatung", "Advisory", "Enterprise Architecture Management", "SAP S/4HANA Transformation"]
+  "serviceType": ["S/4HANA-Readiness-Check", "Programm-Review", "IT-Zielarchitektur", "CIO-Sparring", "Enterprise Architecture Management", "IT-Strategieberatung"]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,7 +106,7 @@
   }
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.4rem;
     list-style: none;
   }
   .nav-links a {
@@ -423,12 +423,91 @@
     color: var(--ink-light);
   }
 
+  /* FORMATE */
+  .formats { display: flex; flex-direction: column; }
+  .format-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .format-item:last-child { border-bottom: 1px solid var(--rule); }
+  .format-meta { padding: 1.9rem 2rem 1.9rem 0; }
+  .format-code {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .format-duration {
+    font-size: 12px;
+    color: var(--ink-light);
+    line-height: 1.5;
+    margin-top: 0.4rem;
+  }
+  .format-body {
+    padding: 1.9rem 0 1.9rem 2rem;
+    border-left: 1px solid var(--rule);
+  }
+  .format-title {
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.55rem;
+  }
+  .format-when {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+    max-width: 620px;
+  }
+  .format-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin: 1.35rem 0 0.6rem;
+  }
+  .format-deliver {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    max-width: 620px;
+  }
+  .format-deliver li {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.6;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+  .format-deliver li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
   /* MOBILE */
   @media (max-width: 720px) {
     .hero-inner { grid-template-columns: 1fr; } .hero-photo { width: 120px; height: 120px; margin: 0 auto; display: block; }
     .hero-meta { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 1.5rem; margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .section-header { grid-template-columns: 1fr; gap: 0.5rem; }
     .services-grid, .skills-columns, .contact-grid { grid-template-columns: 1fr; }
+    .format-item { grid-template-columns: 1fr; }
+    .format-meta { padding: 1.5rem 0 0.35rem; display: flex; align-items: baseline; gap: 0.75rem; }
+    .format-duration { margin-top: 0; }
+    .format-duration br { display: none; }
+    .format-body { padding: 0 0 1.5rem; border-left: none; }
+    .format-title { font-size: 17px; }
     .service-left, .service-right, .skill-cat, .skill-list-wrap { padding-left: 0; border-left: none; }
     .service-right, .skill-list-wrap { padding-top: 0.25rem; }
     .timeline-item, .pub-item { grid-template-columns: 1fr; gap: 0.25rem; }
@@ -449,7 +528,8 @@
     <ul class="nav-links">
       <li><a href="#haltung">Mein Weg</a></li>
       <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#ki">KI &amp; Entwicklung</a></li>
+      <li><a href="#formate">Formate</a></li>
+      <li><a href="#ki">Perspektive</a></li>
       <li><a href="#werdegang">Werdegang</a></li>
       <li><a href="#kompetenzen">Kompetenzen</a></li>
       <li><a href="#auszeichnungen">Auszeichnungen</a></li>
@@ -466,8 +546,9 @@
     <div>
       <div class="hero-eyebrow">IT-Strategieberatung &amp; Advisory</div>
       <h1 class="hero-name">Dr. Robert<br>Ehrensperger</h1>
-      <p class="hero-subtitle">SAP S/4HANA-Transformation · IT-Zielarchitektur · KI-Governance</p>
-      <p class="hero-bio">Ich unterstütze Unternehmen in Bayern und deutschlandweit als unabhängiger IT-Strategieberater bei der Planung und Umsetzung komplexer IT-Transformationen – von der Strategie bis zum erfolgreichen Rollout. Mit über 20 Jahren Erfahrung in der Energiewirtschaft, Automobilindustrie und im Financial-Services-Umfeld bringe ich operative Tiefe und strategische Klarheit dorthin, wo beides gebraucht wird.</p>
+      <p class="hero-subtitle">SAP S/4HANA-Transformation · IT-Zielarchitektur · Programm-Review</p>
+      <p class="hero-bio">Große IT-Transformationen scheitern selten an der Technik. Sie scheitern an Zielbildern, die die Umsetzung nicht tragen, an Architekturentscheidungen, die zu spät korrigiert werden, und an Programmen, deren Status niemand mehr unabhängig bewertet.</p>
+      <p class="hero-bio" style="margin-top:1rem;">Ich bringe über 20 Jahre Konzernerfahrung aus Automotive, Financial Services und Industrie ein – als unabhängiger Berater, der weder Lizenzen noch Umsetzungskapazität verkauft. Sie bekommen ein Urteil, keine Anschlussofferte.</p>
       <a href="mailto:info@drrobertehrensperger.de?subject=Anfrage%20Erstgespr%C3%A4ch" class="hero-cta">Unverbindliches Erstgespräch anfragen</a>
     </div>
     <div class="hero-meta">
@@ -511,92 +592,131 @@
   <div class="section-inner">
     <div class="section-header">
       <div class="section-num">Leistungen</div>
-      <h2 class="section-title">IT-Strategieberatung &amp; Advisory – meine Leistungen</h2>
+      <h2 class="section-title">Drei Felder, in denen ich arbeite</h2>
     </div>
+    <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:700px;margin:0 0 2.5rem;">Meine Unabhängigkeit ist Teil der Leistung: Ich verkaufe keine Lizenzen, keine Umsetzungskapazität und keine Anschlussprojekte. Mein Ergebnis muss sich nur daran messen lassen, ob es Ihre Entscheidung besser macht.</p>
     <div class="services-grid">
-      <div class="service-row">
-        <div class="service-left">IT-Strategie</div>
-        <div class="service-right">
-          <div class="service-title">IT-Strategie &amp; Governance</div>
-          <div class="service-desc">Ich entwickle mit Ihnen eine tragfähige IT-Strategie und etabliere Governance-Strukturen, die wirken – pragmatisch, messbar und anschlussfähig bis auf Vorstandsebene.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Transformation</div>
-        <div class="service-right">
-          <div class="service-title">Digitale Transformation &amp; Programmberatung</div>
-          <div class="service-desc">Ich begleite Ihr Transformationsprogramm – von der Konzeption über die Steuerung bis zum erfolgreichen Abschluss. Erfahrung mit Budgets bis 80 Mio. €/Jahr und Teams bis 250 Personen.</div>
-        </div>
-      </div>
       <div class="service-row">
         <div class="service-left">SAP</div>
         <div class="service-right">
-          <div class="service-title">SAP S/4HANA Transformation &amp; ERP-Beratung</div>
-          <div class="service-desc">Ich begleite Ihre S/4HANA-Transformation von der Roadmap bis zum Go-Live – Brownfield-Migration, Neueinführung oder internationaler Rollout. Damit Ihre SAP-Plattform wirtschaftlich, sicher und zukunftsfähig wird.</div>
+          <div class="service-title">SAP S/4HANA-Transformation</div>
+          <div class="service-desc">Ich bewerte und begleite S/4HANA-Vorhaben aus der Perspektive dessen, der sie selbst verantwortet hat: weltweiter Brownfield-Rollout in einem Industriekonzern, Aufbau eines S/4HANA-basierten Geschäftsökosystems im Financial-Services-Umfeld. Ich kenne die Stellen, an denen Migrationspläne im zweiten Jahr auseinanderfallen &ndash; aus der Verantwortung, nicht aus der Methodenschulung.</div>
         </div>
       </div>
       <div class="service-row">
         <div class="service-left">Architektur</div>
         <div class="service-right">
-          <div class="service-title">Enterprise Architecture Management</div>
-          <div class="service-desc">Ich gestalte Ihre Zielarchitektur – cloudbasiert, skalierbar und auf Ihr Geschäftsmodell ausgerichtet. Wissenschaftlich fundiert durch Promotion und Publikationen, praktisch erprobt im Konzernumfeld.</div>
+          <div class="service-title">Enterprise Architecture &amp; IT-Zielarchitektur</div>
+          <div class="service-desc">Ich entwickle Zielarchitekturen, die eine Entscheidungsgrundlage sind und kein Poster: Prinzipien, Bebauungsplan, Übergangspfad, Abhängigkeiten. Wissenschaftlich fundiert durch Promotion und Publikationen zu Enterprise Architecture Management, praktisch erprobt in der fachlichen Leitung eines Konzern-EAM-Teams.</div>
         </div>
       </div>
       <div class="service-row">
-        <div class="service-left">Führung</div>
+        <div class="service-left">Vorstandsebene</div>
         <div class="service-right">
-          <div class="service-title">IT-Führung &amp; Organisationsentwicklung</div>
-          <div class="service-desc">Ich stärke Ihre IT-Organisation – im Aufbau tragfähiger Strukturen, in der Weiterentwicklung von Führungsrollen oder als Sparringspartner für Ihr Führungsteam. Erfahrung in der Führung von über 55 Mitarbeitenden.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Regulierung</div>
-        <div class="service-right">
-          <div class="service-title">Regulierte Branchen &amp; OT/IT-Integration</div>
-          <div class="service-desc">Ich bringe fundierte Erfahrung aus stark regulierten, kritischen Infrastrukturen mit – von der Integration von OT- und IT-Systemen bis zur Digitalisierung komplexer Prozesse. Diese Expertise ist auf viele regulierte Branchen übertragbar.</div>
+          <div class="service-title">IT-Strategie &amp; Governance auf Entscheiderebene</div>
+          <div class="service-desc">Ich übersetze zwischen IT und Aufsicht: Was bedeutet eine technische Entscheidung wirtschaftlich, wo liegt das Risiko, welche Frage muss das Gremium stellen. Aus der Koordination von Gremienlandschaften auf Bereichsvorstandsebene und der Verantwortung für Budgets bis 80 Mio.&nbsp;€/Jahr.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="formate">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-num">Formate</div>
+      <h2 class="section-title">Vier definierte Formate</h2>
+    </div>
+    <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:700px;margin:0 0 2.5rem;">Ich arbeite überwiegend in klar umrissenen Formaten mit definiertem Ergebnis und Festpreis. Das gibt Ihnen Planungssicherheit &ndash; und mir die Möglichkeit, wenige Mandate mit voller Aufmerksamkeit zu bearbeiten.</p>
+    <div class="formats">
+
+      <div class="format-item">
+        <div class="format-meta">
+          <div class="format-code">Format A</div>
+          <div class="format-duration">4&ndash;6 Wochen<br>Festpreis</div>
+        </div>
+        <div class="format-body">
+          <div class="format-title">S/4HANA-Readiness-Check</div>
+          <p class="format-when">Die ECC-Wartung läuft aus, die Entscheidung zwischen Brownfield, Greenfield und selektiver Migration steht an &ndash; und die bislang belastbarste Einschätzung dazu kommt von denen, die anschließend das Angebot legen wollen.</p>
+          <div class="format-label">Ergebnis</div>
+          <ul class="format-deliver">
+            <li>Entscheidungsvorlage für Vorstand oder Geschäftsführung</li>
+            <li>Bewertung der realistischen Migrationspfade nach Aufwand, Dauer und Risiko</li>
+            <li>Priorisierte Roadmap mit Meilensteinen und Abhängigkeiten</li>
+            <li>Belastbare Grundlage für die Angebotseinholung</li>
+            <li>Präsentation und Verteidigung des Ergebnisses im Gremium</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="format-item">
+        <div class="format-meta">
+          <div class="format-code">Format B</div>
+          <div class="format-duration">3&ndash;4 Wochen<br>Festpreis</div>
+        </div>
+        <div class="format-body">
+          <div class="format-title">Programm-Review</div>
+          <p class="format-when">Ein Transformationsprogramm läuft seit ein bis drei Jahren. Die Statusberichte sind grün, das Bauchgefühl ist es nicht. Sie brauchen die Einschätzung von jemandem, der das Programm nicht selbst verantwortet.</p>
+          <div class="format-label">Ergebnis</div>
+          <ul class="format-deliver">
+            <li>Schriftlicher Befund zu Zielbild, Architektur, Steuerung und Ressourcenausstattung</li>
+            <li>Die drei bis fünf Punkte, an denen tatsächlich eingegriffen werden muss</li>
+            <li>Einschätzung, ob Termin- und Kostenplan tragen</li>
+            <li>Vertrauliche Vorbesprechung, bevor das Ergebnis in ein Gremium geht</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="format-item">
+        <div class="format-meta">
+          <div class="format-code">Format C</div>
+          <div class="format-duration">4 Wochen<br>Festpreis</div>
+        </div>
+        <div class="format-body">
+          <div class="format-title">Zielarchitektur-Sprint</div>
+          <p class="format-when">Die Systemlandschaft ist über Jahre gewachsen. Jede Einzelentscheidung war nachvollziehbar, das Gesamtbild ist es nicht mehr. Es fehlt ein Zielbild, gegen das sich künftige Investitionen prüfen lassen.</p>
+          <div class="format-label">Ergebnis</div>
+          <ul class="format-deliver">
+            <li>Dokumentierte Zielarchitektur mit Architekturprinzipien</li>
+            <li>Bebauungsplan der Ist- und Soll-Landschaft</li>
+            <li>Migrationssequenz mit Abhängigkeiten und Quick Wins</li>
+            <li>Kriterienraster für künftige Investitionsentscheidungen</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="format-item">
+        <div class="format-meta">
+          <div class="format-code">Format D</div>
+          <div class="format-duration">Laufend<br>Monatspauschale</div>
+        </div>
+        <div class="format-body">
+          <div class="format-title">CIO-Sparring</div>
+          <p class="format-when">Sie führen eine IT-Organisation und haben niemanden, mit dem Sie eine Entscheidung ergebnisoffen durchdenken können, ohne dass sie sofort zur Ansage wird.</p>
+          <div class="format-label">Ergebnis</div>
+          <ul class="format-deliver">
+            <li>Fester monatlicher Termin &ndash; vertraulich, ohne Agenda</li>
+            <li>Definierte Erreichbarkeit für kurzfristige Fragen</li>
+            <li>Vorbereitung von Gremien- und Vorstandsterminen</li>
+            <li>Zweitmeinung zu Architektur- und Anbieterentscheidungen</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-size:14px;color:var(--ink-light);line-height:1.7;max-width:700px;margin:2rem 0 0;">Der Festpreis wird nach einem kurzen Scoping-Gespräch verbindlich genannt &ndash; vor Beauftragung, nicht nach Aufwand.</p>
+  </div>
+</section>
+
 <section id="ki">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-num">KI &amp; Entwicklung</div>
+      <div class="section-num">Perspektive</div>
       <h2 class="section-title">Softwareentwicklung im KI-Zeitalter</h2>
     </div>
-    <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:700px;margin:0 0 2.5rem;">Der Einsatz von KI verändert nicht nur einzelne Werkzeuge, sondern die Arbeitsteilung in der Softwareentwicklung selbst. Ich helfe Ihnen, die richtigen Fragen früh zu stellen &ndash; bevor Werkzeugentscheidungen getroffen werden, die sich später schwer korrigieren lassen.</p>
-    <div class="services-grid">
-      <div class="service-row">
-        <div class="service-left">Prozesse</div>
-        <div class="service-right">
-          <div class="service-title">KI-optimierte Entwicklungsprozesse</div>
-          <div class="service-desc">Ich analysiere mit Ihnen Ihren Entwicklungsprozess entlang der gesamten Kette &ndash; von der Anforderung über Implementierung und Review bis zum Deployment &ndash; und identifizieren, wo KI messbaren Nutzen bringt und wo sie nur Aufwand verlagert.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Agenten</div>
-        <div class="service-right">
-          <div class="service-title">Agentenbasierte Entwicklung</div>
-          <div class="service-desc">Welche Entwicklungsaufgaben lassen sich sinnvoll an KI-Agenten übergeben, und welche Leitplanken braucht es dafür? Ich unterstütze bei Architektur, Qualitätssicherung und Governance agentengestützter Entwicklung &ndash; einschließlich der Frage, wer die Verantwortung für generierten Code trägt.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Kompetenzen</div>
-        <div class="service-right">
-          <div class="service-title">Zukünftige Entwicklungskompetenzen</div>
-          <div class="service-desc">Welche Leistungen erbringt künftig die KI, welche bleiben beim Menschen? Ich erarbeite mit Ihnen ein realistisches Zielbild Ihrer Entwicklungsorganisation &ndash; welche Rollen an Bedeutung gewinnen, welche sich wandeln und wie Sie Ihr Team dorthin entwickeln.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Vorgehen</div>
-        <div class="service-right">
-          <div class="service-title">Braucht es noch Scrum?</div>
-          <div class="service-desc">Agile Frameworks entstanden als Antwort auf lange Feedbackzyklen. Wenn ein Entwicklungszyklus statt zwei Wochen einen Tag dauert, verschieben sich die Taktung von Planung, Review und Retrospektive grundlegend. Ich stelle Ihr Vorgehensmodell auf den Prüfstand &ndash; ergebnisoffen und ohne Methodendogma.</div>
-        </div>
-      </div>
-    </div>
+    <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:700px;margin:0 0 1.25rem;">Wenn ein Entwicklungszyklus statt zwei Wochen einen Tag dauert, verschiebt sich mehr als das Werkzeug: die Taktung von Planung und Review, die Frage, welche Rollen bleiben und welche sich wandeln, und die Frage, wer für generierten Code die Verantwortung trägt.</p>
+    <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:700px;margin:0;">Ich beschäftige mich mit diesen Fragen in Vorträgen und in der Praxis &ndash; und bringe sie in Sparring- und Review-Mandate ein, bevor Werkzeug- und Vorgehensentscheidungen fallen, die sich später schwer korrigieren lassen.</p>
+    <p style="margin-top:1.75rem;font-size:15px;color:var(--ink);line-height:1.8;max-width:640px;font-style:italic;border-left:2px solid var(--gold);padding-left:1.25rem;">„Agile Frameworks entstanden als Antwort auf lange Feedbackzyklen. Wenn die Zyklen kürzer werden als die Rituale, die sie strukturieren sollen, ist das eine Frage an das Vorgehensmodell &ndash; keine an die Werkzeuge."</p>
   </div>
 </section>
 
@@ -814,35 +934,14 @@
   <div class="section-inner">
     <div class="section-header">
       <div class="section-num">Zusammenarbeit</div>
-      <h2 class="section-title">Einsatzmodelle</h2>
+      <h2 class="section-title">Wie wir zusammenarbeiten</h2>
     </div>
-    <div class="services-grid">
-      <div class="service-row">
-        <div class="service-left">Advisory</div>
-        <div class="service-right">
-          <div class="service-title">Advisory auf Zeit</div>
-          <div class="service-desc">Begleitung Ihrer IT-Führung über einen definierten Zeitraum – als Programm-Advisor, Architektur-Verantwortlicher oder fachlicher Kopf einer Transformationsinitiative. Umfang und Dauer nach Vereinbarung.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Projekt</div>
-        <div class="service-right">
-          <div class="service-title">Projektberatung</div>
-          <div class="service-desc">Tageweise Unterstützung Ihrer Transformations- und Architekturvorhaben – remote oder vor Ort, flexibel skalierbar nach Projektphase.</div>
-        </div>
-      </div>
-      <div class="service-row">
-        <div class="service-left">Sparring</div>
-        <div class="service-right">
-          <div class="service-title">Sparring &amp; Coaching</div>
-          <div class="service-desc">Vertraulicher Sparringspartner für CIOs, IT-Leiter und Geschäftsführung – bei strategischen Weichenstellungen, Gremienvorbereitung oder Organisationsfragen.</div>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:3rem;padding:2rem 2.25rem;background:var(--paper-alt,rgba(0,0,0,0.02));border-left:2px solid var(--gold);border-radius:2px;max-width:760px;">
-      <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:0.9rem;">Rahmen der Zusammenarbeit</div>
-      <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;margin:0;">Aufgrund meiner aktuellen Führungsrolle in der Energiewirtschaft übernehme ich ausschließlich Mandate außerhalb des Wettbewerbsumfelds meines Arbeitgebers. Anfragen mit Bezug zu Energieversorgern oder Stadtwerken kann ich daher nicht berücksichtigen.</p>
-      <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;margin:1rem 0 0;">Ich arbeite bewusst mit wenigen, sorgfältig ausgewählten Auftraggebern zusammen – Qualität und persönliche Verfügbarkeit stehen vor Auslastung. Umfang und Zeitrahmen jedes Mandats werden so gestaltet, dass sie mit meiner hauptberuflichen Tätigkeit vereinbar sind.</p>
+    <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;max-width:700px;margin:0 0 2rem;">Der Regelfall ist eines der vier Formate. Darüber hinaus begleite ich einzelne Vorhaben über einen längeren Zeitraum &ndash; als Programm-Advisor oder als fachlicher Kopf einer Architekturinitiative. Umfang und Dauer klären wir im Erstgespräch.</p>
+    <div style="padding:2rem 2.25rem;background:var(--paper-alt,rgba(0,0,0,0.02));border-left:2px solid var(--gold);border-radius:2px;max-width:760px;">
+      <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-light);margin-bottom:0.9rem;">Wenige Mandate, volle Aufmerksamkeit</div>
+      <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;margin:0;">Ich nehme pro Jahr eine begrenzte Zahl an Mandaten an. Dafür arbeite ich persönlich &ndash; Sie bekommen nicht ein Team, in dem die Erfahrung, für die Sie sich entschieden haben, zuletzt im Kick-off im Raum war.</p>
+      <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;margin:1rem 0 0;">Meine Unabhängigkeit ist Teil der Leistung: Ich verkaufe keine Lizenzen, keine Umsetzungskapazität und keine Anschlussprojekte. Mein Ergebnis muss sich nur daran messen lassen, ob es Ihre Entscheidung besser macht.</p>
+      <p style="font-size:15px;color:var(--ink-mid);line-height:1.8;margin:1rem 0 0;"><strong style="font-weight:500;color:var(--ink);">Ausschluss:</strong> Aufgrund meiner Führungsrolle in der Energiewirtschaft übernehme ich keine Mandate im Wettbewerbsumfeld meines Arbeitgebers.</p>
     </div>
     <div style="margin-top:2.5rem;">
       <a href="mailto:info@drrobertehrensperger.de?subject=Anfrage%20Erstgespr%C3%A4ch" class="hero-cta">Unverbindliches Erstgespräch anfragen</a>
